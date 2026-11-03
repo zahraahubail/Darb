@@ -68,3 +68,23 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
 @keyframes welcome-label{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @keyframes welcome-leaf{from{opacity:0;transform:translateY(10px) rotate(4deg)}to{opacity:1;transform:translateY(0) rotate(4deg)}}
 @keyframes welcome-orbit{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
+/* Polytechnic's entrance shares the road's SVG coordinates at the arrival point. */
+.campus-entrance{filter:drop-shadow(0 3px 3px #102a3530)}
+.hero-art .campus-pin{top:39%;left:39%;padding:11px 14px}
+.hero-art .campus-pin strong{font-size:11px}
+.hero-art .campus-pin small{font-size:8px}
+@media(max-width:760px){
+  .hero-art{height:280px}
+  .hero-art .road-art{height:300px;top:0;transform:none}
+  .hero-art .campus-pin{top:41%;left:auto;right:22px;padding:10px 12px}
+  .hero-art .label-riffa{top:35%;left:20px}
+  .hero-art .label-isa{top:69%;right:15px}
+  .hero-art .floating-leaf{left:22px;bottom:29px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .campus-entrance{animation:entrance-reveal .9s ease-out 2.35s both}
+}
+@keyframes entrance-reveal{
+  from{opacity:0;transform:translateY(9px)}
+  to{opacity:1;transform:translateY(0)}
+}
