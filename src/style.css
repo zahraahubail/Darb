@@ -35,3 +35,36 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
 .sample-banner{display:flex;align-items:center;gap:12px;padding:13px 17px;margin-bottom:25px;border:1px solid #e6dcba;background:#f3efde;border-radius:9px}
 .sample-banner p{font-size:11px;color:#788169;flex:1}.sample-banner button{font-size:11px;white-space:nowrap;font-weight:600}.sample-banner .tag{white-space:nowrap}
 @media(max-width:760px){.sample-banner{flex-wrap:wrap;padding:12px;gap:8px;margin-bottom:20px}.sample-banner p{font-size:10px;flex-basis:calc(100% - 100px);line-height:1.6}.sample-banner button{margin-left:auto;font-size:10px}}
+/* A single welcome journey, replayed when Home is opened again. */
+@media(prefers-reduced-motion:no-preference){
+  @supports(offset-path:path('M0 0L1 1')){
+    .car-motion{
+      transform:none;
+      offset-path:path('M-45 335 C100 335 130 337 130 252 V156 C130 106 160 90 215 90 H285');
+      offset-rotate:auto 90deg;
+      offset-anchor:0px 0px;
+      offset-distance:100%;
+      animation:welcome-drive 3.6s cubic-bezier(.35,0,.22,1) .2s both;
+      filter:drop-shadow(0 5px 5px #102a3545);
+    }
+    .hero-art .campus-pin{animation:welcome-arrival .7s cubic-bezier(.18,.8,.3,1.15) 3.4s both}
+  }
+  .hero-copy{animation:welcome-copy .65s ease-out both}
+  .hero-art .art-label{animation:welcome-label .65s ease-out .4s both}
+  .hero-art .label-isa{animation-delay:.65s}
+  .hero-art .floating-leaf{animation:welcome-leaf .8s ease-out 1s both}
+  .hero-art .orbit{animation:welcome-orbit 2.5s ease-out .3s 2 both}
+}
+@keyframes welcome-drive{
+  0%{offset-distance:0%;opacity:0}
+  9%{opacity:1}
+  100%{offset-distance:100%;opacity:1}
+}
+@keyframes welcome-arrival{
+  from{opacity:0;transform:translateY(14px) scale(.92) rotate(-5deg)}
+  to{opacity:1;transform:translateY(0) scale(1) rotate(-5deg)}
+}
+@keyframes welcome-copy{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes welcome-label{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes welcome-leaf{from{opacity:0;transform:translateY(10px) rotate(4deg)}to{opacity:1;transform:translateY(0) rotate(4deg)}}
+@keyframes welcome-orbit{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
