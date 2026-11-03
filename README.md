@@ -16,3 +16,6 @@ To test booking acceptance: register two accounts in the same browser, publish w
 - Booked and departed slots are disabled in ride search; each card shows the date it represents. Without a date filter, it shows the next occurrence. The confirmation form checks the selected date again.
 - Pending requests expire at the scheduled time in Asia/Bahrain (UTC+03:00). Expiry checks run every second while open, on focus, and on reopening. With no backend, a closed browser cannot execute a timer; overdue requests are reconciled on reopening.
 - Rule tests: `node --test tests/rules.test.js`.
+
+## Populated sample account
+Use the **View demo account** banner or **Explore with a demo account** at login to view Sara Ahmed's sample account. It includes six weekly offers across all three journey types, eight incoming/outgoing bookings spanning Pending, Accepted, Completed, Rejected, and Cancelled, and seven notifications. Two incoming Sunday requests demonstrate exclusive acceptance. Dates are generated relative to the first load. A one-time additive seed preserves existing browser data and does not duplicate samples on reload. New personal accounts retain their own account-specific pages.
