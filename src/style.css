@@ -40,19 +40,18 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
   @supports(offset-path:path('M0 0L1 1')){
     .car-motion{
       transform:none;
-      offset-path:path('M-45 335 C100 335 130 337 130 252 V156 C130 106 160 90 215 90 H240');
+      offset-path:path('M70 460V350C70 320 90 305 120 305H155C185 305 205 285 205 255V245C205 215 195 195 175 195C145 195 130 180 130 150V145C130 105 155 90 195 90H260');
       offset-rotate:auto 90deg;
       offset-anchor:0px 0px;
       offset-distance:100%;
-      animation:welcome-drive 3.6s cubic-bezier(.35,0,.22,1) .2s both;
+      animation:welcome-drive 5.2s cubic-bezier(.35,0,.22,1) .2s both;
       filter:drop-shadow(0 5px 5px #102a3545);
     }
   }
 }
 @keyframes welcome-drive{
-  0%{offset-distance:0%;opacity:0}
-  9%{opacity:1}
-  100%{offset-distance:100%;opacity:1}
+  from{offset-distance:0%}
+  to{offset-distance:100%}
 }
 /* Polytechnic's entrance shares the road's SVG coordinates at the arrival point. */
 .campus-entrance{filter:drop-shadow(0 3px 3px #102a3530)}
