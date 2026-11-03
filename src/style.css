@@ -40,34 +40,20 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
   @supports(offset-path:path('M0 0L1 1')){
     .car-motion{
       transform:none;
-      offset-path:path('M-45 335 C100 335 130 337 130 252 V156 C130 106 160 90 215 90 H285');
+      offset-path:path('M-45 335 C100 335 130 337 130 252 V156 C130 106 160 90 215 90 H240');
       offset-rotate:auto 90deg;
       offset-anchor:0px 0px;
       offset-distance:100%;
       animation:welcome-drive 3.6s cubic-bezier(.35,0,.22,1) .2s both;
       filter:drop-shadow(0 5px 5px #102a3545);
     }
-    .hero-art .campus-pin{animation:welcome-arrival .7s cubic-bezier(.18,.8,.3,1.15) 3.4s both}
   }
-  .hero-copy{animation:welcome-copy .65s ease-out both}
-  .hero-art .art-label{animation:welcome-label .65s ease-out .4s both}
-  .hero-art .label-isa{animation-delay:.65s}
-  .hero-art .floating-leaf{animation:welcome-leaf .8s ease-out 1s both}
-  .hero-art .orbit{animation:welcome-orbit 2.5s ease-out .3s 2 both}
 }
 @keyframes welcome-drive{
   0%{offset-distance:0%;opacity:0}
   9%{opacity:1}
   100%{offset-distance:100%;opacity:1}
 }
-@keyframes welcome-arrival{
-  from{opacity:0;transform:translateY(14px) scale(.92) rotate(-5deg)}
-  to{opacity:1;transform:translateY(0) scale(1) rotate(-5deg)}
-}
-@keyframes welcome-copy{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes welcome-label{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@keyframes welcome-leaf{from{opacity:0;transform:translateY(10px) rotate(4deg)}to{opacity:1;transform:translateY(0) rotate(4deg)}}
-@keyframes welcome-orbit{0%{opacity:.3}50%{opacity:1}100%{opacity:.3}}
 /* Polytechnic's entrance shares the road's SVG coordinates at the arrival point. */
 .campus-entrance{filter:drop-shadow(0 3px 3px #102a3530)}
 .hero-art .campus-pin{top:39%;left:39%;padding:11px 14px}
@@ -80,11 +66,4 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
   .hero-art .label-riffa{top:35%;left:20px}
   .hero-art .label-isa{top:69%;right:15px}
   .hero-art .floating-leaf{left:22px;bottom:29px}
-}
-@media(prefers-reduced-motion:no-preference){
-  .campus-entrance{animation:entrance-reveal .9s ease-out 2.35s both}
-}
-@keyframes entrance-reveal{
-  from{opacity:0;transform:translateY(9px)}
-  to{opacity:1;transform:translateY(0)}
 }
