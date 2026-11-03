@@ -40,11 +40,11 @@ button:disabled{opacity:.5;cursor:not-allowed;filter:none}
   @supports(offset-path:path('M0 0L1 1')){
     .car-motion{
       transform:none;
-      offset-path:path('M70 460V370C70 315 130 295 130 240V155C130 110 155 90 195 90H260');
+      offset-path:path('M40 460V365C40 330 60 305 95 305C120 305 130 285 130 260V155C130 110 155 90 195 90H260');
       offset-rotate:auto 90deg;
       offset-anchor:0px 0px;
       offset-distance:100%;
-      animation:welcome-drive 4.4s cubic-bezier(.35,0,.22,1) .2s both;
+      animation:welcome-drive 4.6s cubic-bezier(.35,0,.22,1) .2s both;
       filter:drop-shadow(0 5px 5px #102a3545);
     }
   }
