@@ -39,11 +39,22 @@ return <><header><div className="header-inner"><a href="#" className="brand" onC
 <path d="M278 45V61M289 45V61" stroke="#8ca398" strokeWidth="1.5"/>
 <rect x="181" y="4" width="210" height="25" rx="2" fill="#f0efdf"/>
 <path d="M181 29H391V33H181Z" fill="#aeb8a6"/>
-<text x="190" y="19" fontFamily="Arial,sans-serif" fontSize="6.7" fontWeight="700" fill="#233c45">BAHRAIN POLYTECHNIC</text>
+<text x="190" y="19" fontFamily="Arial,sans-serif" fontSize="6.2" fontWeight="700" fill="#233c45">BAHRAIN POLYTECHNIC</text>
 <text x="381" y="20" textAnchor="end" fontFamily="Arial,sans-serif" fontSize="8" fontWeight="600" fill="#233c45">بوليتكنك البحرين</text>
-<path d="M277 6H298C298 20 293 27 287.5 30C281 27 277 20 277 6Z" fill="#234d68"/>
-<path d="M279 7H286C286 16 284 23 287.5 28C281 25 279 18 279 7Z" fill="#69a6ad"/>
-<path d="M275 6C275 19 279 27 285 31" fill="none" stroke="#324d50" strokeWidth="1.8"/>
+<defs>
+<radialGradient id="polytechnic-emblem-glow" cx="90%" cy="3%" r="110%">
+<stop offset="0%" stopColor="#78f6e7"/>
+<stop offset="34%" stopColor="#20c7cb"/>
+<stop offset="67%" stopColor="#126d99"/>
+<stop offset="100%" stopColor="#152550"/>
+</radialGradient>
+</defs>
+<g className="polytechnic-emblem">
+<path d="M274 7H307C307 18.6 300 26.5 290.5 26.5C281 26.5 274 18.6 274 7Z" fill="#243669"/>
+<path d="M274 7H293C293 15.2 289.7 21.2 284.4 24.8C277.8 21.6 274 15.5 274 7Z" fill="url(#polytechnic-emblem-glow)"/>
+<path d="M293 7.6C293 15 289.7 21.3 285.2 24.2" fill="none" stroke="#fffef3" strokeWidth=".55" strokeLinecap="round"/>
+<path d="M271.3 7C271.3 16.5 274.8 23.7 281.1 27" fill="none" stroke="#253654" strokeWidth=".55" strokeLinecap="round"/>
+</g>
 <rect x="216" y="55" width="3" height="11" rx="1" fill="#eac34e"/>
 <rect x="216" y="59" width="3" height="4" fill="#254047"/>
 <rect x="349" y="55" width="3" height="11" rx="1" fill="#eac34e"/>
