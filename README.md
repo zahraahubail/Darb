@@ -1,4 +1,4 @@
-# Drab
+# Darb (Drab)
 Mobile-first Polytechnic student ride-sharing prototype, built with React and Vite.
 
 ## Run
